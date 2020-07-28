@@ -38,18 +38,18 @@ export default class BaseProvider implements DApi {
   }
 
   getPrivateKey(): PrivateKey {
-    let privateKey = this.options.privateKey;
     const mnemonic = this.options.mnemonic;
+    const privateKey = this.options.privateKey;
     const algorithm = this.options.algorithm;
     const KeyParameters = this.options.KeyParameters;
 
-    if (!privateKey && mnemonic) {
-      privateKey = PrivateKey.generateFromMnemonic(mnemonic, "m/44'/1024'/0'/0/0").key;
+    if (mnemonic) {
+      return PrivateKey.generateFromMnemonic(mnemonic, "m/44'/1024'/0'/0/0");
     }
-    if (!privateKey) {
-      throw 'NO_ACCOUNT';
+    if (privateKey) {
+      return new PrivateKey(privateKey, algorithm, KeyParameters);
     }
-    return new PrivateKey(privateKey, algorithm, KeyParameters);
+    throw new Error('NO_ACCOUNT');
   }
 
   destory() {

@@ -1,6 +1,6 @@
+import { AssetApi } from 'ontology-dapi';
 import { CONST, Crypto, OntAssetTxBuilder, TransactionBuilder } from 'ontology-ts-sdk';
 import Address = Crypto.Address;
-import { AssetApi } from 'ontology-dapi';
 import DApiBaseProvider from '../base-provider';
 
 export default class AssetApiImp implements AssetApi {
@@ -34,6 +34,6 @@ export default class AssetApiImp implements AssetApi {
     if (response.Result.State === 0) {
       throw new Error('OTHER');
     }
-    return response.Result.TxHash
+    return response.Result.TxHash;
   }
 }
