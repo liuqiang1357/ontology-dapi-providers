@@ -1148,7 +1148,7 @@ base-58@^0.0.1:
   resolved "https://registry.yarnpkg.com/base-58/-/base-58-0.0.1.tgz#85d3e70251075661933388f831d1eb8b8f6314e3"
   integrity sha1-hdPnAlEHVmGTM4j4MdHri49jFOM=
 
-base-x@^3.0.2, base-x@^3.0.5:
+base-x@^3.0.2:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/base-x/-/base-x-3.0.8.tgz#1e1106c2537f0162e8b52474a557ebb09000018d"
   integrity sha512-Rl/1AWP4J/zRrk54hhlxH4drNxPJXYUaKffODVI53/dAsV4t9fBxyxYKAVPU1XBHxYwOWP9h9H0hM2MVw4YfJA==
@@ -3205,7 +3205,7 @@ is-symbol@^1.0.2:
   dependencies:
     has-symbols "^1.0.1"
 
-is-typedarray@^1.0.0, is-typedarray@~1.0.0:
+is-typedarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
   integrity sha1-5HnICFjfDBsR3dppQPlgEfzaSpo=
@@ -4469,16 +4469,15 @@ once@^1.3.0, once@^1.3.1, once@^1.4.0:
   dependencies:
     wrappy "1"
 
-ontology-dapi@^0.4.6:
-  version "0.4.9"
-  resolved "https://registry.yarnpkg.com/ontology-dapi/-/ontology-dapi-0.4.9.tgz#39404b5706603b4de9901172f3be970ff8aa4ab8"
-  integrity sha512-ej/qBGGjYYZisnCfosoF4h2zB6BQ+7gr1Nd9LwySB1A2eSCPcglUVxoVqVKdXeQ+HIHsuZfVmqGyf4tlJCXiDQ==
+ontology-dapi@0.4.6:
+  version "0.4.6"
+  resolved "https://registry.yarnpkg.com/ontology-dapi/-/ontology-dapi-0.4.6.tgz#e8f505bae78608c2867d747f25f5b467a633f83e"
+  integrity sha512-XHQAKzCdP558Ww9gbJMGVgXmz4yaWz8w8QF+l+92NOunHLat0Z0Ldl5y9yg4tDiv8nmtGWeoxRCozaMM6eumXQ==
   dependencies:
     "@ont-community/window-post-message-proxy" "^0.2.14"
-    base-x "^3.0.5"
+    bs58 "^4.0.1"
     crypto-js "^3.1.9-1"
     promise-timeout "^1.3.0"
-    typedarray-to-buffer "^3.1.5"
     uuid "^3.3.2"
     webextension-polyfill-ts "^0.8.7"
 
@@ -5957,13 +5956,6 @@ type-check@~0.3.2:
   integrity sha1-WITKtRLPHTVeP7eE8wgEsrUg23I=
   dependencies:
     prelude-ls "~1.1.2"
-
-typedarray-to-buffer@^3.1.5:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/typedarray-to-buffer/-/typedarray-to-buffer-3.1.5.tgz#a97ee7a9ff42691b9f783ff1bc5112fe3fca9080"
-  integrity sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==
-  dependencies:
-    is-typedarray "^1.0.0"
 
 typedarray@^0.0.6:
   version "0.0.6"
